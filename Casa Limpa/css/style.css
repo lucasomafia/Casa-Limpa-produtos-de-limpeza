@@ -1,0 +1,249 @@
+body{
+    margin: 0;
+    font-family: 'Sen', sans-serif; 
+}
+h1, h2, h3 { font-family: 'Sen', sans-serif; }
+
+
+
+header img{
+    width: 10%;
+}
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(67, 93, 145);
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+.header-navegador{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+
+}
+.btn-contato {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #43b34b;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-contato i {
+  font-size: 18px;
+}
+
+.btn-contato:hover {
+  opacity: 0.9;
+}
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Ocupa 80% da altura da ecrã */
+  min-height: 500px;
+  /* Substitua o caminho abaixo pelo caminho da sua imagem */
+  background-image: url('/assets/hero.jpg'); 
+  background-size: cover;       /* Ajusta a imagem para cobrir toda a área sem distorcer */
+  background-position: center;  /* Centraliza a imagem */
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  
+  color: #ffffff;
+}
+
+/* Camada escura por cima da imagem para dar contraste ao texto */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 50% de opacidade */
+  z-index: 1;
+}
+
+/* Conteúdo que fica por cima do overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.hero-content a{
+    align-self: flex-start;
+}
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-content h2 {
+  color: rgb(228, 195, 11);
+}
+
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: rgb(67, 93, 145);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgb(73, 115, 199);
+}
+/* Remove o sublinhado e faz o link herdar a cor do h3 */
+h2 a {
+    color: inherit;          /* Mantém a mesma cor do h3 */
+    text-decoration: none;   /* Remove o sublinhado */
+}
+
+/* Opcional: Adiciona um efeito suave ao passar o mouse */
+h2 a:hover {
+    text-decoration: underline; /* Ou mude a cor se preferir, ex: color: #007bff; */
+}
+
+
+/* cards marcas
+/* Container da Secção de Marcas */
+.marcas-alta {
+    background-color: #f8f9fa; /* Fundo suave */
+}
+
+.marcas-alta h2 {
+    padding: 0 20px;
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.marcas-alta .subtitle {
+    padding: 0 20px;
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+
+/* Secção do Carrossel */
+.carrossel-marcas-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.carrossel-marcas-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.carrossel-marcas-section .subtitle {
+    text-align: center;
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+/* Espaçamento para as setas e paginação */
+.marcas-swiper {
+    padding: 20px 10px 50px 10px !important;
+}
+
+/* Card da Marca */
+.marca-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.marca-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Cabeçalho do Card (onde fica a logo) */
+.marca-header {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.marca-header.bg-veja { background-color: #0b3297; }
+.marca-header.bg-genco { background-color: #f5b900; }
+.marca-header.bg-vonixx { background-color: #000000; }
+.marca-header.bg-ype { background-color: #0066cc; }
+.marca-header.bg-omo { background-color: #ffffff; border-bottom: 1px solid #eee; }
+
+.logo-marca {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* Corpo do Card */
+.marca-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.marca-body h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+    color: #1a1a1a;
+}
+
+.marca-body p {
+    color: #666666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Botão de Ação */
+.btn-ver-produtos {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ver-produtos:hover {
+    background-color: #0056b3;
+}
