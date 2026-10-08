@@ -1,0 +1,337 @@
+body{
+    margin: 0;
+    font-family: 'Sen', sans-serif; 
+    background-color: rgb(34, 36, 41);
+}
+h1, h2, h3 { font-family: 'Sen', sans-serif; }
+
+/* IMPORTANTE: Adicione um padding ao body para a página não ficar escondida atrás do header */
+body {
+    padding-top: 70px; /* Ajuste este valor de acordo com a altura real do seu header */
+}
+
+header img{
+    width: 10%;
+}
+header{
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    position: fixed;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(67, 93, 145);
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+.header-navegador{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+
+}
+.btn-contato {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #43b34b;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-contato i {
+  font-size: 18px;
+}
+
+.btn-contato:hover {
+  opacity: 0.9;
+}
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Ocupa 80% da altura da ecrã */
+  min-height: 500px;
+  /* Substitua o caminho abaixo pelo caminho da sua imagem */
+  background-image: url('/assets/hero.jpg'); 
+  background-size: cover;       /* Ajusta a imagem para cobrir toda a área sem distorcer */
+  background-position: center;  /* Centraliza a imagem */
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  
+  color: #ffffff;
+}
+
+/* Camada escura por cima da imagem para dar contraste ao texto */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 50% de opacidade */
+  z-index: 1;
+}
+
+/* Conteúdo que fica por cima do overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.hero-content a{
+    align-self: flex-start;
+}
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-content h2 {
+  color: rgb(228, 195, 11);
+}
+
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: rgb(67, 93, 145);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgb(73, 115, 199);
+}
+/* Remove o sublinhado e faz o link herdar a cor do h3 */
+h2 a {
+    color: inherit;          /* Mantém a mesma cor do h3 */
+    text-decoration: none;   /* Remove o sublinhado */
+}
+
+/* Opcional: Adiciona um efeito suave ao passar o mouse */
+h2 a:hover {
+    text-decoration: underline; /* Ou mude a cor se preferir, ex: color: #007bff; */
+}
+
+/* CARROSSEL DE MARCAS (Swiper) */
+.carrossel-marcas {
+  max-width: 90%;
+  height: 700px;
+  overflow: hidden;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+
+.slide {
+    width: 100%;
+    height: 100%; /* Altere para a altura ideal do seu slide */
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* AS DUAS LINHAS ABAIXO EVITAM O ZOOM */
+}
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,20,20,0.1), rgba(20,20,20,0.8));
+}
+
+.logo-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border-radius: 50%;
+  padding: 7px 10px;
+  background: none;
+}
+
+.logo-badge img {
+  max-width: 100px;
+  display: block;
+  border-radius: 50px;
+}
+
+.slide-texto {
+  position: absolute;
+  bottom: 20px;
+  left: 18px;
+  right: 18px;
+  color: white;
+}
+
+/* cor das setas e bolinhas do Swiper pra combinar com a marca */
+.carrossel-marcas .swiper-button-prev,
+.carrossel-marcas .swiper-button-next {
+  color: #ffffff;
+}
+
+.carrossel-marcas .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+
+.titulo-carrossel{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(67, 93, 145);
+    margin-bottom: 20px;
+}
+.titulo-carrossel h3{
+    margin: 0px;
+    color: rgb(255, 255, 255);
+}
+.titulo-carrossel h1{
+    margin: 10 0px;
+    color: gold;
+}
+.marca-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção e preenche a área sem esticar */
+}
+
+
+/* ===============================================
+   SEÇÃO HERO CTA WHATSAPP
+   =============================================== */
+
+.whatsapp-hero-cta {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background-image: url('/assets/imagem-estoque.jpg'); /* Altere para o caminho da imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  font-family: inherit; /* Mantém a fonte original do seu site */
+  margin-bottom: 30px   ;
+}
+
+/* Overlay escuro para garantir o contraste do texto */
+.whatsapp-hero-cta .cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.75);
+  z-index: 1;
+}
+
+/* Conteúdo alinhado à esquerda no mesmo padrão da Hero Section */
+.whatsapp-hero-cta .cta-container {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto 0 5%;
+  text-align: left;
+}
+
+/* Subtítulo Amarelo (Estilo "Desde 2020") */
+.whatsapp-hero-cta .cta-subtitle {
+  display: flex;
+  color: #eab308;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: inherit;
+}
+
+/* Título em destaque */
+.whatsapp-hero-cta .cta-title {
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+/* Texto descritivo */
+.whatsapp-hero-cta .cta-description {
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 0 28px 0;
+  max-width: 600px;
+}
+
+/* Botão Verde do WhatsApp com bordas suaves (estilo botão da Hero) */
+.whatsapp-hero-cta .btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25d366;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  transition: all 0.25s ease-in-out;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.whatsapp-hero-cta .btn-whatsapp:hover {
+  background-color: #20ba5a;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
+.whatsapp-hero-cta .btn-whatsapp svg {
+  display: block;
+}
+
+/* Ajustes para telas menores / celulares */
+@media (max-width: 768px) {
+  .whatsapp-hero-cta {
+    min-height: 350px;
+    padding: 40px 20px;
+  }
+
+  .whatsapp-hero-cta .cta-container {
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .whatsapp-hero-cta .cta-description {
+    font-size: 0.95rem;
+  }
+
+  .whatsapp-hero-cta .btn-whatsapp {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
